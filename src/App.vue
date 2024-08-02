@@ -103,11 +103,11 @@ html, body {
 }
 
 .footer {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
   font-family: 'BGrove';
-  font-size: 0.8rem;
+  font-size: 1rem;
   color: #000000;
   padding: 0.5rem;
 }
@@ -136,7 +136,7 @@ html, body {
   }
 
   .footer {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
   }
 }
 
@@ -164,7 +164,7 @@ html, body {
   }
 
   .footer {
-    font-size: 0.6rem;
+    font-size: 0.8rem;
   }
 }
 
