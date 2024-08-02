@@ -32,7 +32,6 @@ html, body {
   padding: 0;
   height: 100vh;
   width: 100vw;
-  background-color: #909090;
   color: #000000;
   font-family: 'Arial', sans-serif;
   display: flex;
