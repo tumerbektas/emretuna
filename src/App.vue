@@ -106,12 +106,15 @@ html, body {
   position: fixed;
   bottom: 0;
   left: 0;
+  right: 0;
   font-family: 'BGrove';
   font-size: 1rem;
   color: #000000;
   padding: 0.5rem;
   margin: 0;
+  text-align: center; /* Center the text within the footer */
 }
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
