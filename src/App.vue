@@ -103,13 +103,13 @@ html, body {
 }
 
 .footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  font-family: 'BGrove';
-  font-size: 1rem;
-  color: #000000;
-  padding: 0.5rem;
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 300; /* Light font weight */
+  font-family: 'Rawen'; /* Use a light-weight font if available */
 }
 
 /* Responsive Design */
