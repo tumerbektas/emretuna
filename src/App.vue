@@ -103,7 +103,6 @@ html, body {
 }
 
 .footer {
-  position: fixed;
   bottom: 0;
   left: 0;
   font-family: 'BGrove';
