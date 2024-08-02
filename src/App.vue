@@ -1,4 +1,4 @@
-<template>
+RE<template>
   <div class="centered">
     <p class="classic-font">EMRE TUNA</p>
     <p class="subtitle">Agricultural Engineer</p>
@@ -20,7 +20,7 @@
       </div>
     </div>
     <div class="footer">
-      <p>© 2024 Tümer Bektaş Gediz</p>
+      <p>© 2024 Emre Tuna</p>
     </div>
   </div>
 </template>
