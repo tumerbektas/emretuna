@@ -7,7 +7,7 @@
     <p class="classic-font">Emre Tuna</p>
     <p class="subtitle">Agricultural Engineer</p>
     <p class="description">
-      My name is Emre, and I am currently a senior student pursuing a degree in Agricultural Engineering at Ege University. I have completed my compulsory internship in the R&D department of Abalıoğlu Feed Company. From a young age, I have been deeply interested in and curious about animals. I am committed to continuously developing myself professionally in this field.
+      My name is Emre, and I am currently a senior student pursuing a degree in Agricultural Engineering at Ege University. I have completed my compulsory internship in the R&D department of Abalioglu Feed Company. From a young age, I have been deeply interested in and curious about animals. I am committed to continuously developing myself professionally in this field.
     </p>
     <div class="social-links">
       <div class="links">
