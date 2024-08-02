@@ -103,14 +103,19 @@ html, body {
 }
 
 .footer {
+  position: fixed;
   bottom: 0;
   left: 0;
+  width: 100%;
   font-family: 'BGrove';
   font-size: 1rem;
   color: #000000;
   padding: 0.5rem;
   margin: 0;
+  text-align: center; /* Center the text within the footer */
+  background-color: #ffffff; /* Optional: Add a background color for better visibility */
 }
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
