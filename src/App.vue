@@ -19,6 +19,9 @@
         </div>
       </div>
     </div>
+    <div class="footer">
+      <p>© 2024 Tümer Bektaş Gediz</p>
+    </div>
   </div>
 </template>
 
@@ -99,6 +102,16 @@ html, body {
   color: #ffffff;
 }
 
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-family: 'BGrove';
+  font-size: 0.8rem;
+  color: #000000;
+  padding: 0.5rem;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .classic-font {
@@ -120,6 +133,10 @@ html, body {
 
   .link-group h3 {
     font-size: 1.2rem;
+  }
+
+  .footer {
+    font-size: 0.7rem;
   }
 }
 
@@ -144,6 +161,10 @@ html, body {
 
   .link-group h3 {
     font-size: 1rem;
+  }
+
+  .footer {
+    font-size: 0.6rem;
   }
 }
 
