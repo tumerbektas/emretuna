@@ -1,4 +1,4 @@
-RE<template>
+<template>
   <div class="centered">
     <p class="classic-font">EMRE TUNA</p>
     <p class="subtitle">Agricultural Engineer</p>
@@ -103,13 +103,14 @@ html, body {
 }
 
 .footer {
-  position: absolute;
-  bottom: 1rem;
-  left: 1rem;
-  color: #ffffff;
-  font-size: 0.9rem;
-  font-weight: 300; /* Light font weight */
-  font-family: 'Rawen'; /* Use a light-weight font if available */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  font-family: 'BGrove';
+  font-size: 1rem;
+  color: #000000;
+  padding: 0.5rem;
+  margin: 0;
 }
 
 /* Responsive Design */
