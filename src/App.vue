@@ -1,21 +1,23 @@
 <template>
-  <div class="centered">
-    <p class="classic-font">EMRE TUNA</p>
-    <p class="subtitle">Agricultural Engineer</p>
-    <p class="description">
-      My name is Emre, and I am currently a senior student pursuing a degree in Agricultural Engineering at Ege University. I have completed my compulsory internship in the R&D department of Abalioglu Feed Company. From a young age, I have been deeply interested in and curious about animals. I am committed to continuously developing myself professionally in this field.
-    </p>
-    <div class="social-links">
-      <div class="links">
-        <div class="link-group">
-          <h3>CONNECT</h3>
-          <a href="mailto:etuna2867@gmail.com" target="_blank">Mail</a>
-          <a href="https://www.linkedin.com/in/emre-tuna-48316b289?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">LinkedIn</a>
-        </div>
-        <div class="link-group">
-          <h3>SOCIAL</h3>
-          <a href="https://www.instagram.com/_emretuna_/" target="_blank">Instagram</a>
-          <a href="https://x.com/emretunna" target="_blank">X</a>
+  <div class="container">
+    <div class="centered">
+      <p class="classic-font">EMRE TUNA</p>
+      <p class="subtitle">Agricultural Engineer</p>
+      <p class="description">
+        My name is Emre, and I am currently a senior student pursuing a degree in Agricultural Engineering at Ege University. I have completed my compulsory internship in the R&D department of Abalioglu Feed Company. From a young age, I have been deeply interested in and curious about animals. I am committed to continuously developing myself professionally in this field.
+      </p>
+      <div class="social-links">
+        <div class="links">
+          <div class="link-group">
+            <h3>CONNECT</h3>
+            <a href="mailto:etuna2867@gmail.com" target="_blank">Mail</a>
+            <a href="https://www.linkedin.com/in/emre-tuna-48316b289?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">LinkedIn</a>
+          </div>
+          <div class="link-group">
+            <h3>SOCIAL</h3>
+            <a href="https://www.instagram.com/_emretuna_/" target="_blank">Instagram</a>
+            <a href="https://x.com/emretunna" target="_blank">X</a>
+          </div>
         </div>
       </div>
     </div>
@@ -27,7 +29,6 @@
 
 <style>
 /* Global CSS */
-/* Global CSS */
 html, body {
   margin: 0;
   padding: 0;
@@ -37,11 +38,17 @@ html, body {
   color: #000000;
   font-family: 'Arial', sans-serif;
   display: flex;
-  flex-direction: column; /* Ensure the layout is vertical */
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .centered {
-  flex: 1; /* Take up remaining space to push footer to the bottom */
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -50,8 +57,65 @@ html, body {
   padding-bottom: 4rem; /* Ensure there's enough space for the footer */
 }
 
+.classic-font {
+  font-size: 6rem;
+  font-family: 'Forta';
+  color: #000000;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 2rem;
+  color: #000000;
+  font-family: 'BGrove';
+  margin-top: 0.5rem;
+}
+
+.description {
+  font-size: 1.5rem;
+  color: #000000;
+  margin-top: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'BGrove';
+  max-width: 1000px;
+  line-height: 1.5;
+}
+
+.social-links {
+  margin-top: 3rem;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 6rem;
+}
+
+.link-group {
+  text-align: center;
+  font-family: 'Rawen';
+}
+
+.link-group h3 {
+  font-size: 1.5rem;
+  color: #000000;
+  margin-bottom: 1.5rem;
+}
+
+.link-group a {
+  display: block;
+  color: #000000;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+}
+
+.link-group a:hover {
+  color: #ffffff;
+}
+
 .footer {
-  position: relative; /* Adjusted from fixed to relative */
+  position: relative;
   font-family: 'BGrove';
   font-size: 1rem;
   color: #000000;
@@ -144,5 +208,4 @@ html, body {
   font-weight: normal;
   font-style: normal;
 }
-
 </style>
