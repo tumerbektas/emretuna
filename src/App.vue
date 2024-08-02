@@ -3,18 +3,18 @@
     <p class="classic-font">EMRE TUNA</p>
     <p class="subtitle">Agricultural Engineer</p>
     <p class="description">
-      My name is Emre, and I am currently a senior student pursuing a degree in Agricultural Engineering at Ege University. I have completed my compulsory internship in the R&D department of Abalioglu Feed Company. From a young age, I have been deeply interested in and curious about animals. I am committed to continuously developing myself professionally in this field.
+      My name is Emre, and I am currently a senior student pursuing a degree in Agricultural Engineering at Ege University. I have completed my compulsory internship in the R&D department of Abalioglu Feed Company. From a young age, I have been deeply interested in and curious about animals. I am committed to continuously developing myself professionally in this field.
     </p>
     <div class="social-links">
       <div class="links">
         <div class="link-group">
           <h3>CONNECT</h3>
           <a href="mailto:etuna2867@gmail.com" target="_blank">Mail</a>
-          <a href="https://www.linkedin.com/in/emre-tuna-48316b289?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">Linkedin</a>
+          <a href="https://www.linkedin.com/in/emre-tuna-48316b289?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">LinkedIn</a>
         </div>
         <div class="link-group">
-          <h3>SOCİAL</h3>
-          <a href="https://www.instagram.com/_emretuna_/" target="_blank">İnstagram</a>
+          <h3>SOCIAL</h3>
+          <a href="https://www.instagram.com/_emretuna_/" target="_blank">Instagram</a>
           <a href="https://x.com/emretunna" target="_blank">X</a>
         </div>
       </div>
@@ -99,6 +99,54 @@ html, body {
   color: #ffffff;
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+  .classic-font {
+    font-size: 4rem;
+  }
+
+  .subtitle {
+    font-size: 1.5rem;
+  }
+
+  .description {
+    font-size: 1.2rem;
+  }
+
+  .links {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .link-group h3 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .classic-font {
+    font-size: 3rem;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+  }
+
+  .description {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .links {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .link-group h3 {
+    font-size: 1rem;
+  }
+}
+
 /* Font definitions */
 @font-face {
   font-family: 'BGrove';
@@ -121,12 +169,10 @@ html, body {
   font-style: normal;
 }
 
-
 @font-face {
   font-family: 'Rawen';
   src: url('./assets/RawengulkSans-094.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
-
 </style>
