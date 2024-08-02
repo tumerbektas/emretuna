@@ -121,7 +121,7 @@ html, body {
   color: #000000;
   padding: 0.5rem;
   margin: 0;
-  bottom: 10px;
+  bottom: 20px;
   text-align: center; /* Center the text within the footer */
 }
 
