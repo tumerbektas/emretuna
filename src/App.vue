@@ -117,7 +117,7 @@ html, body {
 
 .footer {
   position: absolute; /* Adjusted position */
-  bottom: 10px;
+  top: 100px;
   left: 0;
   right: 0;
   font-family: 'BGrove';
