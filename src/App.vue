@@ -45,6 +45,7 @@ html, body {
   display: flex;
   flex-direction: column;
   flex: 1;
+  position: relative; /* Ensures footer positioning works */
 }
 
 .centered {
@@ -54,7 +55,7 @@ html, body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding-bottom: 4rem; /* Ensure there's enough space for the footer */
+  padding-bottom: 2rem; /* Adjust to ensure space above footer */
 }
 
 .classic-font {
@@ -115,13 +116,14 @@ html, body {
 }
 
 .footer {
-  position: relative;
+  position: absolute; /* Adjusted position */
+  bottom: 0;
+  left: 0;
+  right: 0;
   font-family: 'BGrove';
   font-size: 1rem;
   color: #000000;
   padding: 0.5rem;
-  margin: 0;
-  bottom: 20px;
   text-align: center; /* Center the text within the footer */
 }
 
