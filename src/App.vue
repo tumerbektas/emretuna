@@ -27,11 +27,12 @@
 
 <style>
 /* Global CSS */
+/* Global CSS */
 html, body {
   margin: 0;
   padding: 0;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   background-color: #909090;
   color: #000000;
   font-family: 'Arial', sans-serif;
@@ -39,71 +40,16 @@ html, body {
   align-items: center;
   justify-content: center;
   text-align: center;
+  position: relative; /* Add this line */
 }
 
 .centered {
   transform: translateY(-5%);
-}
-
-.classic-font {
-  font-size: 6rem;
-  font-family: 'Forta';
-  color: #000000;
-  margin: 0;
-}
-
-.subtitle {
-  font-size: 2rem;
-  color: #000000;
-  font-family: 'BGrove';
-  margin-top: 0.5rem;
-}
-
-.description {
-  font-size: 1.5rem;
-  color: #000000;
-  margin-top: 1rem;
-  margin-left: auto;
-  margin-right: auto;
-  font-family: 'BGrove';
-  max-width: 1000px;
-  line-height: 1.5;
-}
-
-.social-links {
-  margin-top: 3rem;
-}
-
-.links {
-  display: flex;
-  justify-content: center;
-  gap: 6rem;
-}
-
-.link-group {
-  text-align: center;
-  font-family: 'Rawen';
-}
-
-.link-group h3 {
-  font-size: 1.5rem;
-  color: #000000;
-  margin-bottom: 1.5rem;
-}
-
-.link-group a {
-  display: block;
-  color: #000000;
-  text-decoration: none;
-  margin-bottom: 0.5rem;
-}
-
-.link-group a:hover {
-  color: #ffffff;
+  position: relative; /* Add this line */
 }
 
 .footer {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   left: 0;
   font-family: 'BGrove';
@@ -197,4 +143,5 @@ html, body {
   font-weight: normal;
   font-style: normal;
 }
+
 </style>
