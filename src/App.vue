@@ -3,29 +3,29 @@
 
 <template>
   <div class="container">
-  <div class="centered">
-    <p class="classic-font">Emre Tuna</p>
-    <p class="subtitle">Agricultural Engineer</p>
-    <p class="description">
-      My name is Emre, and I am currently a senior student pursuing a degree in Agricultural Engineering at Ege University. I have completed my compulsory internship in the R&D department of Abalioglu Feed Company. From a young age, I have been deeply interested in and curious about animals. I am committed to continuously developing myself professionally in this field.
-    </p>
-    <div class="social-links">
-      <div class="links">
-        <div class="link-group">
-          <h3>CONNECT</h3>
-          <a href="mailto:etuna2867@gmail.com" target="_blank">Gmail</a>
-          <a href="https://www.linkedin.com/in/emre-tuna-48316b289?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">Linkedin</a>
-        </div>
-        <div class="link-group">
-          <h3>SOCIAL</h3>
-          <a href="https://www.instagram.com/_emretuna_/" target="_blank">İnstagram</a>
-          <a href="https://x.com/emretunna" target="_blank">X</a>
+    <div class="centered">
+      <p class="classic-font fade-in">Emre Tuna</p>
+      <p class="subtitle fade-in">Agricultural Engineer</p>
+      <p class="description fade-in">
+        My name is Emre, and I am currently a senior student pursuing a degree in Agricultural Engineering at Ege University. I have completed my compulsory internship in the R&D department of Abalioglu Feed Company. From a young age, I have been deeply interested in and curious about animals. I am committed to continuously developing myself professionally in this field.
+      </p>
+      <div class="social-links">
+        <div class="links">
+          <div class="link-group">
+            <h3 class="fade-in">CONNECT</h3>
+            <a class="fade-in" href="mailto:etuna2867@gmail.com" target="_blank">Gmail</a>
+            <a class="fade-in" href="https://www.linkedin.com/in/emre-tuna-48316b289?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">Linkedin</a>
+          </div>
+          <div class="link-group">
+            <h3 class="fade-in">SOCIAL</h3>
+            <a class="fade-in" href="https://www.instagram.com/_emretuna_/" target="_blank">Instagram</a>
+            <a class="fade-in" href="https://x.com/emretunna" target="_blank">X</a>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-  <footer class="footer">
+  <footer class="footer fade-in">
     © 2024 Emre Tuna
   </footer>
 </template>
@@ -110,7 +110,6 @@ html, body {
 }
 
 /* Footer styles */
-/* Footer styles */
 .footer {
   position: absolute;
   bottom: 1rem;
@@ -134,6 +133,20 @@ html, body {
   src: url('./assets/RawengulkSans-094.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
+}
+
+/* Fade-in animation */
+.fade-in {
+  animation: fadeIn 2s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    color: #000000; /* Start color black */
+  }
+  100% {
+    color: #ffffff; /* End color white */
+  }
 }
 
 /* Mobile styles */
