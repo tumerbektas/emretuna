@@ -27,6 +27,7 @@
 
 <style>
 /* Global CSS */
+/* Global CSS */
 html, body {
   margin: 0;
   padding: 0;
@@ -36,77 +37,21 @@ html, body {
   color: #000000;
   font-family: 'Arial', sans-serif;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  flex-direction: column; /* Ensure the layout is vertical */
 }
 
 .centered {
-  transform: translateY(-5%);
-}
-
-.classic-font {
-  font-size: 6rem;
-  font-family: 'Forta';
-  color: #000000;
-  margin: 0;
-}
-
-.subtitle {
-  font-size: 2rem;
-  color: #000000;
-  font-family: 'BGrove';
-  margin-top: 0.5rem;
-}
-
-.description {
-  font-size: 1.5rem;
-  color: #000000;
-  margin-top: 1rem;
-  margin-left: auto;
-  margin-right: auto;
-  font-family: 'BGrove';
-  max-width: 1000px;
-  line-height: 1.5;
-}
-
-.social-links {
-  margin-top: 3rem;
-}
-
-.links {
+  flex: 1; /* Take up remaining space to push footer to the bottom */
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  gap: 6rem;
-}
-
-.link-group {
   text-align: center;
-  font-family: 'Rawen';
-}
-
-.link-group h3 {
-  font-size: 1.5rem;
-  color: #000000;
-  margin-bottom: 1.5rem;
-}
-
-.link-group a {
-  display: block;
-  color: #000000;
-  text-decoration: none;
-  margin-bottom: 0.5rem;
-}
-
-.link-group a:hover {
-  color: #ffffff;
+  padding-bottom: 4rem; /* Ensure there's enough space for the footer */
 }
 
 .footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  position: relative; /* Adjusted from fixed to relative */
   font-family: 'BGrove';
   font-size: 1rem;
   color: #000000;
@@ -114,7 +59,6 @@ html, body {
   margin: 0;
   text-align: center; /* Center the text within the footer */
 }
-
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -200,4 +144,5 @@ html, body {
   font-weight: normal;
   font-style: normal;
 }
+
 </style>
