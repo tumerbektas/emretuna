@@ -116,73 +116,46 @@ html, body {
 }
 
 .footer {
-  position: absolute; /* Adjusted position */
-  top: 550px;
-  left: 0;
-  right: 0;
-  font-family: 'BGrove';
-  font-size: 1rem;
-  color: #000000;
-  padding: 0.5rem;
-  text-align: center; /* Center the text within the footer */
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 300; /* Light font weight */
+  font-family: 'Rawen'; /* Use a light-weight font if available */
 }
-
 /* Responsive Design */
+/* Mobile styles */
 @media (max-width: 768px) {
+  body {
+    padding: 1rem; /* Add padding to the body for mobile */
+  }
+
   .classic-font {
-    font-size: 4rem;
+    font-size: 4rem; /* Smaller font size for mobile */
   }
 
   .subtitle {
-    font-size: 1.5rem;
+    font-size: 1.5rem; /* Smaller font size for mobile */
   }
 
   .description {
-    font-size: 1.2rem;
+    font-size: 1.2rem; /* Smaller font size for mobile */
+    max-width: 100%; /* Full width for better mobile readability */
+  }
+
+  .social-links {
+    margin-top: 2rem; /* Adjust margin for mobile */
   }
 
   .links {
-    flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem; /* Smaller gap for mobile */
   }
 
   .link-group h3 {
-    font-size: 1.2rem;
-  }
-
-  .footer {
-    font-size: 0.9rem;
+    font-size: 1.25rem; /* Smaller heading size for mobile */
   }
 }
-
-@media (max-width: 480px) {
-  .classic-font {
-    font-size: 3rem;
-  }
-
-  .subtitle {
-    font-size: 1.2rem;
-  }
-
-  .description {
-    font-size: 1rem;
-    padding: 0 1rem;
-  }
-
-  .links {
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-
-  .link-group h3 {
-    font-size: 1rem;
-  }
-
-  .footer {
-    font-size: 0.8rem;
-  }
-}
-
 /* Font definitions */
 @font-face {
   font-family: 'BGrove';
