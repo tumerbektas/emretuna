@@ -119,6 +119,7 @@ html, body {
 
 .links {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
 }
@@ -211,8 +212,13 @@ html, body {
   }
 
   .links {
-    flex-direction: column; /* Stack links vertically on mobile */
     gap: 1.5rem; /* Smaller gap for mobile */
+    flex-wrap: nowrap; /* Prevent wrapping */
+    overflow-x: auto; /* Enable horizontal scrolling */
+  }
+
+  .link-group {
+    flex: 1 1 100%; /* Each link group takes full width */
   }
 
   .link-group h3 {
