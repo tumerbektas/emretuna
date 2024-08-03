@@ -17,20 +17,24 @@ const switchLanguage = (language) => {
 <template>
   <div class="container">
     <div class="language-switch">
-      <button @click="switchLanguage" :class="{'active': isEnglish}">English</button>
-      <button @click="switchLanguage" :class="{'active': !isEnglish}">Turkish</button>
+      <button @click="switchLanguage('en')" :class="{'active': isEnglish}">English</button>
+      <button @click="switchLanguage('tr')" :class="{'active': !isEnglish}">Turkish</button>
     </div>
     <div class="centered">
-      <p v-show="!showContent" class="classic-font fade-in">{{ isEnglish ? 'Emre Tuna' : 'Emre Tuna' }}</p>
+      <div v-show="!showContent" class="classic-font fade-in" :class="{ 'slide-out-left': showContent }">
+        {{ isEnglish ? 'Emre Tuna' : 'Emre Tuna'  }}
+      </div>
       <button v-show="!showContent" @click="handleClick" class="fade-in button">{{ isEnglish ? 'More' : 'Daha Fazla' }}</button>
-      <div v-show="showContent" class="fade-in">
-        <p class="subtitle fade-in">{{ isEnglish ? 'Agricultural Engineer' : 'Tarım Mühendisi' }}</p>
+      <div v-show="showContent" class="fade-in slide-in-right">
+        <p class="subtitle fade-in">
+          {{ isEnglish ? 'Agricultural Engineer' : 'Tarım Mühendisi'  }}
+        </p>
         <p class="description fade-in">
           {{ isEnglish 
             ? "My name is Emre, and I am currently a senior student pursuing a degree in Agricultural Engineering at Ege University. I have completed my compulsory internship in the R&D department of Abalioglu Feed Company. From a young age, I have been deeply interested in and curious about animals. I am committed to continuously developing myself professionally in this field."
-            : "Benim adım Emre ve şu anda Ege Üniversitesi'nde Tarım Mühendisliği bölümü son sınıf öğrencisiyim. Abalıoğlu Yem Şirketi'nin Ar-Ge departmanında zorunlu stajımı tamamladım. Küçük yaşlardan itibaren hayvanlara derin bir ilgi ve merak duydum. Bu alanda kendimi sürekli olarak profesyonel olarak geliştirmeye kararlıyım." }}
-        </p>
-        <div class="social-links">
+            : "Benim adım Emre ve şu anda Ege Üniversitesi'nde Tarım Mühendisliği bölümü son sınıf öğrencisiyim. Abalıoğlu Yem Şirketi'nin Ar-Ge departmanında zorunlu stajımı tamamladım. Küçük yaşlardan itibaren hayvanlara derin bir ilgi ve merak duydum. Bu alanda kendimi sürekli olarak profesyonel olarak geliştirmeye kararlıyım." }}       
+          </p>
+       <div class="social-links">
           <div class="links fade-in">
             <div class="link-group">
               <h3>{{ isEnglish ? 'CONNECT' : 'BAĞLAN' }}</h3>
@@ -51,6 +55,7 @@ const switchLanguage = (language) => {
     © 2024 Emre Tuna
   </footer>
 </template>
+
 
 <style>
 /* Global CSS */
