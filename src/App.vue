@@ -218,5 +218,9 @@ html, body {
   .link-group h3 {
     font-size: 1.25rem; /* Smaller heading size for mobile */
   }
+
+  .link-group a {
+    font-size: 1rem; /* Smaller font size for mobile links */
+  }
 }
 </style>
