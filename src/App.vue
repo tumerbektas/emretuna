@@ -2,31 +2,42 @@
 import { ref } from 'vue';
 
 const showContent = ref(false);
+const isEnglish = ref(true);
 
 const handleClick = () => {
   showContent.value = true;
+};
+
+const switchLanguage = () => {
+  isEnglish.value = !isEnglish.value;
 };
 </script>
 
 <template>
   <div class="container">
+    <div class="language-switch">
+      <button @click="switchLanguage" :class="{'active': isEnglish}">English</button>
+      <button @click="switchLanguage" :class="{'active': !isEnglish}">Turkish</button>
+    </div>
     <div class="centered">
-      <p v-show="!showContent" class="classic-font fade-in">Emre Tuna</p>
-      <button v-show="!showContent" @click="handleClick" class="fade-in button">Show More</button>
+      <p v-show="!showContent" class="classic-font fade-in">{{ isEnglish ? 'Emre Tuna' : 'Emre Tuna' }}</p>
+      <button v-show="!showContent" @click="handleClick" class="fade-in button">{{ isEnglish ? 'More' : 'Daha Fazla' }}</button>
       <div v-show="showContent" class="fade-in">
-        <p class="subtitle fade-in">Agricultural Engineer</p>
+        <p class="subtitle fade-in">{{ isEnglish ? 'Agricultural Engineer' : 'Tarım Mühendisi' }}</p>
         <p class="description fade-in">
-          My name is Emre, and I am currently a senior student pursuing a degree in Agricultural Engineering at Ege University. I have completed my compulsory internship in the R&D department of Abalioglu Feed Company. From a young age, I have been deeply interested in and curious about animals. I am committed to continuously developing myself professionally in this field.
+          {{ isEnglish 
+            ? "My name is Emre, and I am currently a senior student pursuing a degree in Agricultural Engineering at Ege University. I have completed my compulsory internship in the R&D department of Abalioglu Feed Company. From a young age, I have been deeply interested in and curious about animals. I am committed to continuously developing myself professionally in this field."
+            : "Benim adım Emre ve şu anda Ege Üniversitesi'nde Tarım Mühendisliği bölümü son sınıf öğrencisiyim. Abalıoğlu Yem Şirketi'nin Ar-Ge departmanında zorunlu stajımı tamamladım. Küçük yaşlardan itibaren hayvanlara derin bir ilgi ve merak duydum. Bu alanda kendimi sürekli olarak profesyonel olarak geliştirmeye kararlıyım." }}
         </p>
         <div class="social-links">
           <div class="links fade-in">
             <div class="link-group">
-              <h3>CONNECT</h3>
+              <h3>{{ isEnglish ? 'CONNECT' : 'BAĞLAN' }}</h3>
               <a href="mailto:etuna2867@gmail.com" target="_blank">Gmail</a>
               <a href="https://www.linkedin.com/in/emre-tuna-48316b289?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">Linkedin</a>
             </div>
             <div class="link-group">
-              <h3>SOCIAL</h3>
+              <h3>{{ isEnglish ? 'SOCIAL' : 'SOSYAL' }}</h3>
               <a href="https://www.instagram.com/_emretuna_/" target="_blank">Instagram</a>
               <a href="https://x.com/emretunna" target="_blank">X</a>
             </div>
@@ -55,10 +66,39 @@ html, body {
   justify-content: center;
   text-align: center;
   position: relative; /* Ensures that footer positioning works */
+  overflow: hidden; /* Hide scrollbar during transition */
+}
+
+.language-switch {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  gap: 0.5rem; /* Adjust space between buttons */
+}
+
+.language-switch button {
+  background-color: transparent;
+  color: #ffffff;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  font-family: 'Rawen'; /* Use the same font as the main text */
+}
+
+.language-switch button.active {
+  text-decoration: none;
+  color: #d0d0d0;
+  font-weight: bold; /* Highlight selected language */
+}
+
+.language-switch button:hover {
+  color: #d0d0d0;
 }
 
 .centered {
   transform: translateY(-5%);
+  position: relative; /* Ensure correct positioning */
 }
 
 .classic-font {
@@ -80,7 +120,6 @@ html, body {
   border-radius: 8px; /* Kenarları yuvarlat */
   display: inline-block; /* Yazının üstüne tıklanabilir olması için */
 }
-
 
 .button:hover {
   background-color: #555555;
@@ -179,9 +218,11 @@ html, body {
 @keyframes fadeIn {
   0% {
     opacity: 0;
+    transform: translateX(-100%); /* Start from the left */
   }
   100% {
     opacity: 1;
+    transform: translateX(0); /* End at the normal position */
   }
 }
 
@@ -189,6 +230,12 @@ html, body {
 @media (max-width: 768px) {
   body {
     padding: 1rem; /* Add padding to the body for mobile */
+  }
+
+  .language-switch {
+    top: 0.5rem;
+    right: 0.5rem;
+    gap: 0.25rem; /* Reduce space between buttons */
   }
 
   .classic-font {
