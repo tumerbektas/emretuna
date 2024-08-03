@@ -32,7 +32,7 @@ const switchLanguage = (language) => {
         <p class="description fade-in">
           {{ isEnglish 
             ? "My name is Emre, and I am currently a senior student pursuing a degree in Agricultural Engineering at Ege University. I have completed my compulsory internship in the R&D department of Abalioglu Feed Company. From a young age, I have been deeply interested in and curious about animals. I am committed to continuously developing myself professionally in this field."
-            : "Benim adım Emre ve şu anda Ege Üniversitesi'nde Ziraat Mühendisliği bölümü son sınıf öğrencisiyim. Abalıoğlu Yem Şirketi'nin Ar-Ge departmanında zorunlu stajımı tamamladım. Küçük yaşlardan itibaren hayvanlara derin bir ilgi ve merak duydum. Bu alanda kendimi profesyonel olarak geliştirmeye kararlıyım." }}       
+            : "Adım Emre ve şu anda Ege Üniversitesi Ziraat Mühendisliği son sınıf öğrencisiyim. Zorunlu stajımı Abalıoğlu Yem Şirketi'nin Ar-Ge departmanında tamamladım. Küçük yaşlardan beri hayvanlara karşı derin bir ilgim ve merakım var. Bu alanda kendimi profesyonel olarak sürekli geliştirmeye kararlıyım." }}       
           </p>
        <div class="social-links">
           <div class="links fade-in">
