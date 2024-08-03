@@ -218,11 +218,11 @@ html, body {
 @keyframes fadeIn {
   0% {
     opacity: 0;
-    transform: translateX(-100%); /* Start from the left */
+    transform: translateY(-20px); /* Start from above */
   }
   100% {
     opacity: 1;
-    transform: translateX(0); /* End at the normal position */
+    transform: translateY(0); /* End at the normal position */
   }
 }
 
