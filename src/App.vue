@@ -5,11 +5,12 @@ const showContent = ref(false);
 const isEnglish = ref(true);
 
 const handleClick = () => {
-  showContent.value = true;
+  showContent.value = !showContent.value;
 };
 
-const switchLanguage = () => {
-  isEnglish.value = !isEnglish.value;
+const switchLanguage = (language) => {
+  isEnglish.value = language === 'en';
+  showContent.value = false; // Reset content visibility when switching languages
 };
 </script>
 
@@ -66,30 +67,32 @@ html, body {
   justify-content: center;
   text-align: center;
   position: relative; /* Ensures that footer positioning works */
-  overflow: hidden; /* Hide scrollbar during transition */
+  overflow: hidden; /* Hide overflow to remove scrollbars */
 }
 
 .language-switch {
   position: absolute;
   top: 1rem;
   right: 1rem;
-  display: flex;
-  gap: 0.5rem; /* Adjust space between buttons */
+  display: flex; /* Align buttons horizontally */
+  gap: 0.5rem; /* Space between buttons */
 }
 
 .language-switch button {
   background-color: transparent;
   color: #ffffff;
-  border: none;
+  border: 2px solid transparent; /* Border for active state */
   font-size: 1rem;
   cursor: pointer;
+  padding: 0.5rem 1rem;
   font-family: 'Rawen'; /* Use the same font as the main text */
+  transition: color 0.3s, border-color 0.3s; /* Smooth transition for color changes */
 }
 
 .language-switch button.active {
-  text-decoration: none;
   color: #d0d0d0;
-  font-weight: bold; /* Highlight selected language */
+  border-color: #d0d0d0; /* Border color for active button */
+  font-weight: bold; /* Make the active language button bold */
 }
 
 .language-switch button:hover {
@@ -98,14 +101,14 @@ html, body {
 
 .centered {
   transform: translateY(-5%);
-  position: relative; /* Ensure correct positioning */
+  padding: 1rem; /* Add padding for better spacing */
 }
 
 .classic-font {
   font-size: 6rem;
   font-family: 'Rawen';
   color: #ffffff;
-  animation: fadeIn 2s ease-in-out forwards;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Smooth transition */
 }
 
 .button {
@@ -133,10 +136,42 @@ html, body {
   animation: fadeIn 2s ease-in-out forwards;
 }
 
+/* Slide-out animation */
+@keyframes slideOutLeft {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+/* Slide-in animation */
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-out-left {
+  animation: slideOutLeft 0.5s forwards;
+}
+
+.slide-in-right {
+  animation: slideInRight 0.5s forwards;
+}
+
 .subtitle {
   font-size: 2rem;
   color: #ffffff;
-  font-family: 'BGrove';
+  font-family: 'Rawen'; /* Use the same font as the main text */
   margin-top: 0.5rem;
   display: block;
 }
@@ -147,7 +182,7 @@ html, body {
   margin-top: 1rem;
   margin-left: auto;
   margin-right: auto;
-  font-family: 'BGrove';
+  font-family: 'Rawen'; /* Use the same font as the main text */
   max-width: 90%;
   line-height: 1.5;
   display: block;
@@ -199,6 +234,10 @@ html, body {
   color: #ffffff;
 }
 
+.turkish-font {
+  font-family: 'Comic Sans MS', sans-serif;
+}
+
 /* Font definitions */
 @font-face {
   font-family: 'BGrove';
@@ -214,16 +253,11 @@ html, body {
   font-style: normal;
 }
 
-/* Fade-in animation */
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(-20px); /* Start from above */
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0); /* End at the normal position */
-  }
+@font-face {
+  font-family: 'LiberationSans';
+  src: url('./assets/LiberationSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 /* Mobile styles */
