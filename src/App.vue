@@ -72,13 +72,15 @@ html, body {
   margin-top: 1rem;
   font-size: 1.5rem;
   padding: 0.5rem 1rem;
-  color: #ffffff;
-  background-color: #333333;
+  color: #ffffff; /* Yazı rengi beyaz */
+  background-color: #000000; /* Arka plan rengi siyah */
   border: none;
   cursor: pointer;
   font-family: 'BGrove';
-  border-radius: 8px; /* Add rounded edges */
+  border-radius: 8px; /* Kenarları yuvarlat */
+  display: inline-block; /* Yazının üstüne tıklanabilir olması için */
 }
+
 
 .button:hover {
   background-color: #555555;
